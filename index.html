@@ -25,4 +25,69 @@ h2{font:italic 32px Georgia;margin:0;color:#c75f70}
 .verse{font:16px Georgia;line-height:1.4;margin:15px 0}
 .info{border-top:1px solid #e7c3c3;border-bottom:1px solid #e7c3c3;padding:12px;margin:15px 0;line-height:1.5}
 .btn{display:block;background:#7b2434;color:white;text-decoration:none;padding:14px;border-radius:30px;font-weight:bold;margin-top:15px}
-#
+#musicBtn{display:none;position:fixed;top:12px;right:12px;z-index:50;border:0;border-radius:25px;padding:10px 14px;background:#7b2434;color:white}
+</style>
+</head>
+<body>
+
+<audio id="music" src="mulher-preciosa-entre-elas.mp3"></audio>
+<button id="musicBtn" onclick="musicToggle()">⏸ Música</button>
+
+<div class="box">
+<div class="logo">PÍER ⚓ CHURCH<small>REDE DE MULHERES</small></div>
+
+<div class="env" id="env" onclick="abrir()">
+<div class="flap"></div>
+<div class="seal">E</div>
+<div class="hint">💌 TOQUE PARA ABRIR SEU CONVITE</div>
+
+<div class="card" onclick="event.stopPropagation()">
+<h1>ENTRE</h1>
+<h2>Elas</h2>
+
+<div class="tag">MULHERES CONECTADAS PELA FÉ,<br>UNIDAS POR UM PROPÓSITO.</div>
+
+<div class="verse">
+“Cada uma ajuda a outra e diz à sua companheira: Esforça-te!”
+<br><b>ISAÍAS 41:6</b>
+</div>
+
+<div class="info">
+<b>SÁBADO • 04 DE OUTUBRO • 18:00</b><br>
+Píer Church<br>
+Rua Dr. Braz Resende de Freitas, 140<br>
+Cabuçu • Nova Iguaçu/RJ
+</div>
+
+Você é nossa convidada para um tempo especial de comunhão, Palavra e amizade.
+
+<a class="btn" href="https://wa.me/5521989570155?text=Ol%C3%A1%2C%20Pastora%20Eliane%21%20Quero%20confirmar%20minha%20presen%C3%A7a%20no%20Entre%20Elas." target="_blank">
+💗 Confirmar presença
+</a>
+</div>
+</div>
+</div>
+
+<script>
+const m=document.getElementById("music");
+const b=document.getElementById("musicBtn");
+
+function abrir(){
+document.getElementById("env").classList.add("open");
+b.style.display="block";
+m.play();
+}
+
+function musicToggle(){
+if(m.paused){
+m.play();
+b.innerHTML="⏸ Música";
+}else{
+m.pause();
+b.innerHTML="▶ Música";
+}
+}
+</script>
+
+</body>
+</html>
