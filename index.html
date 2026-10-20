@@ -3,6 +3,6 @@ const audio=document.getElementById('louvor'),music=document.getElementById('mus
 document.getElementById('open').addEventListener('click',async()=>{document.getElementById('main').classList.add('opened');try{audio.currentTime=0;await audio.play();music.textContent='♫ Pausar louvor'}catch(e){music.textContent='♫ Tocar louvor'}});
 music.addEventListener('click',async()=>{if(audio.paused){try{await audio.play();music.textContent='♫ Pausar louvor'}catch(e){music.textContent='♫ Tocar louvor'}}else{audio.pause();music.textContent='♫ Tocar louvor'}});
 audio.addEventListener('ended',()=>music.textContent='♫ Reproduzir louvor');
-document.getElementById('share').addEventListener('click',()=>window.open('https://wa.me/?text='+encodeURIComponent('Você é nosso convidado especial! ⚓ Consagração dos Novos Servos da Píer Church, 14/11 às 18h. Abra o convite: '+location.href),'_blank'));
+document.getElementById('share').addEventListener('click',()=>window.open('https://wa.me/?text='+encodeURIComponent('Você é nosso convidado especial! ⚓ Consagração dos Novos Servos da Píer Church, 14/11 às 18h. Abra o convite: https://vai.la/Convite'),'_blank'));
 document.getElementById('map').addEventListener('click',()=>window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('Rua Dr. Braz Resende de Freitas 140 Cabuçu Nova Iguaçu RJ'),'_blank'));
 </script></body></html>
